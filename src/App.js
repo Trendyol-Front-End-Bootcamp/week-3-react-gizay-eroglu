@@ -1,23 +1,24 @@
-import './App.css';
-import Card from './components/Card';
-import Filter from './components/Filter';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import "./App.css";
+import Card from "./components/Card";
+import Filter from "./components/Filter";
+import Header from "./components/Header";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function App() {
   const [characters, setCharacters] = useState([]);
 
   const getAllCharacters = async () => {
     const response = await axios.get(
-      'https://rickandmortyapi.com/api/character'
+      "https://rickandmortyapi.com/api/character"
     );
     setCharacters(response.data.results);
   };
 
   const filterCharacters = async (name, gender, status) => {
-    const nameParam = name ? `name=${name}&` : '';
-    const genderParam = gender ? `gender=${gender}&` : '';
-    const statusParam = status ? `status=${status}` : '';
+    const nameParam = name ? `name=${name}&` : "";
+    const genderParam = gender ? `gender=${gender}&` : "";
+    const statusParam = status ? `status=${status}` : "";
 
     try {
       const response = await axios.get(
@@ -36,23 +37,26 @@ function App() {
 
   return (
     <>
+      <Header />
       <Filter filter={filterCharacters} />
-      {characters.length > 0 ? (
-        characters.map((character) => {
-          return (
-            <Card
-              key={character.id}
-              image={character.image}
-              name={character.name}
-              status={character.status}
-              gender={character.gender}
-              species={character.species}
-            />
-          );
-        })
-      ) : (
-        <h4>Not Found</h4>
-      )}
+      <div className='page-grid'>
+        {characters.length > 0 ? (
+          characters.map((character) => {
+            return (
+              <Card
+                key={character.id}
+                image={character.image}
+                name={character.name}
+                status={character.status}
+                gender={character.gender}
+                species={character.species}
+              />
+            );
+          })
+        ) : (
+          <div className='not-found-text'>Not Found</div>
+        )}
+      </div>
     </>
   );
 }
