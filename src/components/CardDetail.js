@@ -12,13 +12,23 @@ function CardDetail({
       <img src={image} alt='Character' />
       <div className='card-text'>
         <h5>Name: {name}</h5>
-        <small>Status: {status}</small>
-        <small>Species: {species}</small>
-        <small>Gender: {gender}</small>
-        <div>Location: {locationName}</div>
-
+        <span>Status: {status}</span>
+        <span>Species: {species}</span>
+        <span>Gender: {gender}</span>
+        <span>Location: {locationName}</span>
+        <h5>Last 5 Episodes:</h5>
+        <div className='episode-heading'>
+          <div>
+            <b>Name of the Episode</b>
+          </div>
+          <div>
+            <b>Air Date of the Episode</b>
+          </div>
+          <div>
+            <b>Episode</b>
+          </div>
+        </div>
         <div className='episodes'>
-          Last 5 Episodes:
           {lastFiveEpisodes.map((episode) => {
             return (
               <div className='episode'>

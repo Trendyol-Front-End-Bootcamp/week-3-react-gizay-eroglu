@@ -1,3 +1,7 @@
+.card-detailed h5 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
 .filtersClass {
   display: flex;
   flex-direction: row;
@@ -32,10 +36,11 @@ select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-top: 20px;
+  gap: 10px;
 }
 .card {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
   margin: 10px;
   border-radius: 20px;
   height: 150px;
@@ -55,7 +60,9 @@ select {
   border-bottom-left-radius: 20px;
   height: 150px;
 }
-.not-found-text {
+/*?card loading and not found text style */
+.not-found-text,
+.card-loading {
   font-size: 50px;
   color: salmon;
   padding-left: 20px;
@@ -63,24 +70,42 @@ select {
 }
 .card-detailed {
   display: flex;
-  flex-direction: column;
-  margin: 50px;
+  flex-direction: row;
+  width: 1200px;
+  margin: auto;
+  margin-top: 30px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .card-detailed img {
-  background-color: blueviolet;
-  border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .card-detailed > .card-text {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 0 10px 20px 20px;
+  font-size: 15px;
 }
-.episodes {
+.episode,
+.episode-heading {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 30px;
-  text-align: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+/* go back to home button that stays in card detail page */
+.go-homepage-button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: none;
+  background-color: salmon;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }

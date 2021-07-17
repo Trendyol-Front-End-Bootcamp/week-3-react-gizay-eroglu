@@ -48,13 +48,15 @@ function DetailPage({ match }) {
   };
 
   if (!character) {
-    return <div>Loading</div>;
+    return <div className='card-loading'>Loading</div>;
   }
 
   return (
     <>
       <Header />
-      <button onClick={handleGoHome}>Go Home</button>
+      <button className='go-homepage-button' onClick={handleGoHome}>
+        Go Home
+      </button>
       <CardDetail
         name={character.name}
         gender={character.gender}
