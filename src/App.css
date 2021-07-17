@@ -1,25 +1,37 @@
 .filtersClass {
-  margin: 20px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   background-color: salmon;
-  padding: 10px;
+  padding: 15px;
+
   justify-content: center;
 }
 .header {
   display: flex;
   justify-content: center;
   color: salmon;
-  padding-top: 10px;
+  font-weight: 800;
+  font-size: 40px;
 }
-input {
+input,
+select {
   border: none;
   border-radius: 20px;
+  padding: 2px 30px;
+  outline: none;
+}
+.filter-button {
+  background-color: white;
+  color: salmon;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 3px 30px;
 }
 .page-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 20px;
 }
 .card {
   display: grid;
@@ -28,6 +40,10 @@ input {
   border-radius: 20px;
   height: 150px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card:hover {
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 .cardText {
   display: flex;
@@ -40,7 +56,8 @@ input {
   height: 150px;
 }
 .not-found-text {
-  margin-left: 20px;
   font-size: 50px;
   color: salmon;
+  padding-left: 20px;
+  font-weight: 600;
 }

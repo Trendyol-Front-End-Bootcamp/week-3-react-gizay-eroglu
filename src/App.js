@@ -54,7 +54,7 @@ function App() {
             );
           })
         ) : (
-          <div className='not-found-text'>Not Found</div>
+          <div className='not-found-text'>Not Found !</div>
         )}
       </div>
     </>

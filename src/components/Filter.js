@@ -56,7 +56,7 @@ function Filter({ filter }) {
           <option value='dead'>Dead</option>
           <option value='unknown'>Unknown</option>
         </select>
-        <input type='submit' value='Filter' />
+        <input className='filter-button' type='submit' value='Filter' />
       </form>
     </>
   );
