@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   color: salmon;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 40px;
 }
 input,
@@ -30,22 +30,22 @@ select {
 }
 .page-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   padding-top: 20px;
 }
 .card {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   margin: 10px;
   border-radius: 20px;
   height: 150px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .card:hover {
-  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-.cardText {
+.card > .card-text {
   display: flex;
   flex-direction: column;
   margin-left: 10%;
@@ -60,4 +60,27 @@ select {
   color: salmon;
   padding-left: 20px;
   font-weight: 600;
+}
+.card-detailed {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card-detailed img {
+  background-color: blueviolet;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.card-detailed > .card-text {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.episodes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  text-align: center;
 }
