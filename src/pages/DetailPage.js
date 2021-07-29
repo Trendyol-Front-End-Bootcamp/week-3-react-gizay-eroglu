@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
 
 import Header from "../components/Header";
 import CardDetail from "../components/CardDetail";
+
+import { getCharacterById } from "../services/RickAndMortyApi";
 
 function DetailPage({ match }) {
   const {
@@ -14,29 +15,8 @@ function DetailPage({ match }) {
   const [character, setCharacter] = useState(null);
 
   const getCharacter = async () => {
-    const response = await axios.get(
-      `https://rickandmortyapi.com/api/character/${id}`
-    );
-
-    const characterData = response.data;
-    characterData.lastFiveEpisodes = [];
-
-    let count = 0;
-
-    while (count < 5) {
-      const episodeUrl = characterData.episode[count];
-
-      if (!episodeUrl) {
-        break;
-      }
-
-      const episodeResponse = await axios.get(episodeUrl);
-      characterData.lastFiveEpisodes.push(episodeResponse.data);
-
-      count++;
-    }
-
-    setCharacter(characterData);
+    const character = await getCharacterById(id);
+    setCharacter(character);
   };
 
   useEffect(() => {
