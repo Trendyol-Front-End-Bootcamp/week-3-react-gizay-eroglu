@@ -32,4 +32,10 @@ describe("Card detail component test", function () {
       const cardTextDiv = wrapper.find(".card-text")
       expect(cardTextDiv).toBeTruthy();
   })
+
+  it("should episodes return episode list", () => {
+    const episodeList = [ { name: "first episode" }, { name: "second episode" } ];
+    const component = shallow (<CardDetail lastFiveEpisodes={episodeList} />);
+    expect(component.findWhere( n => n.type() === "div" && n.contains("first episode")));
+  })
 });

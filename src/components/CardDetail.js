@@ -29,9 +29,9 @@ function CardDetail({
           </div>
         </div>
         <div className='episodes'>
-          {lastFiveEpisodes.map((episode) => {
+          {lastFiveEpisodes.map((episode, index) => {
             return (
-              <div className='episode'>
+              <div className='episode' key={index}>
                 <div>{episode.name}</div>
                 <div>{episode.air_date}</div>
                 <div>{episode.episode}</div>

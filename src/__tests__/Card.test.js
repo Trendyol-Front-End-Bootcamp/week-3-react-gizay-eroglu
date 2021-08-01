@@ -25,8 +25,8 @@ describe("Card component test", function () {
 
   it("should give response to click event", () => {
      const mockCallBackClick = jest.fn();
-        const wrapper = shallow(<div className='card' onClick={mockCallBackClick}></div>);
-        wrapper.find('div').simulate('click');
+    wrapper = shallow(<Card onCardClick={mockCallBackClick}/>);
+    wrapper.simulate("click");
         expect(mockCallBackClick.mock.calls.length).toEqual(1);
   });
 
