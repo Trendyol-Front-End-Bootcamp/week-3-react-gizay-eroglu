@@ -2,7 +2,7 @@ import React from "react";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { shallow, configure } from "enzyme";
 
-import Header from "../components/Header";
+import Header from "../../components/Header";
 
 configure({adapter: new Adapter()});
 

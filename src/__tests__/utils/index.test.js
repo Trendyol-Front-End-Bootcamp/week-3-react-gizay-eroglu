@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import { mock } from "jest";
-import { renderToDOM } from "../index";
+import { renderToDOM } from "../../index";
  
 jest.mock("react-dom");
 

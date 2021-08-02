@@ -3,7 +3,7 @@ import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { shallow, configure } from "enzyme";
 import Enzyme from "enzyme";
 
-import Filter, { handleNameChange } from "../components/Filter";
+import Filter, { handleNameChange } from "../../components/Filter";
 
 configure({adapter: new Adapter()});
 

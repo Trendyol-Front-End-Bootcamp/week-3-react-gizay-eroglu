@@ -2,7 +2,7 @@ import React from "react";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { shallow, configure } from "enzyme";
 
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
 configure({adapter: new Adapter()});
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 import sinon from "sinon";
-import { getCharacters , getCharacterById } from "../services/RickAndMortyApi";
+import { getCharacters , getCharacterById } from "../../services/RickAndMortyApi";
 
 let sandbox = sinon.createSandbox(); 
 
