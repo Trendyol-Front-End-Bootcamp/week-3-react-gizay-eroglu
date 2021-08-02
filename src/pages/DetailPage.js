@@ -21,7 +21,7 @@ function DetailPage({ match }) {
 
   useEffect(() => {
     getCharacter();
-  }, [id]);
+  }, []);
 
   const handleGoHome = () => {
     history.push("/");

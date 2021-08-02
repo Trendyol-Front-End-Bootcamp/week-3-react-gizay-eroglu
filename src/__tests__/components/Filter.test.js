@@ -4,6 +4,7 @@ import { shallow, configure } from "enzyme";
 import Enzyme from "enzyme";
 
 import Filter, { handleNameChange } from "../../components/Filter";
+import MainPage from "../../pages/MainPage";
 
 configure({adapter: new Adapter()});
 
@@ -44,6 +45,17 @@ describe("Filter component test", () => {
     status = wrapper.find("#status");
     expect(status.prop("value")).toEqual("dead");
   })
-})
+
+  it("should form handle the submit", () => {
+      const handleSubmit = jest.fn();
+      const wrapper = shallow(<Filter filter={handleSubmit}/>);
+      const instance = wrapper.instance();
+      const submitForm = wrapper
+      .find(".filtersClass")
+      .simulate("submit", { preventDefault: () => null });
+      expect(handleSubmit).toHaveBeenCalled();
+  });
+});
+
 
 
