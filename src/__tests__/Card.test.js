@@ -1,5 +1,5 @@
 import React from "react";
-import Adapter from "enzyme-adapter-react-16.1";
+import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { shallow, configure } from "enzyme";
 
 import Card from "../components/Card";
@@ -24,10 +24,10 @@ describe("Card component test", function () {
   })
 
   it("should give response to click event", () => {
-     const mockCallBackClick = jest.fn();
+    const mockCallBackClick = jest.fn();
     wrapper = shallow(<Card onCardClick={mockCallBackClick}/>);
     wrapper.simulate("click");
-        expect(mockCallBackClick.mock.calls.length).toEqual(1);
+    expect(mockCallBackClick.mock.calls.length).toEqual(1);
   });
 
 });

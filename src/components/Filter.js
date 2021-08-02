@@ -26,7 +26,7 @@ function Filter({ filter }) {
     <>
       <form className='filtersClass' onSubmit={handleSubmit}>
         <label htmlFor='name'>Name:</label>
-        <input
+        <input 
           type='text'
           id='name'
           name='name'
