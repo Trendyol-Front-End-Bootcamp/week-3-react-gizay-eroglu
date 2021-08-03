@@ -1,6 +1,6 @@
 import React from 'react';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import { shallow, configure } from 'enzyme';
+import Enzyme, { shallow, configure, mount } from 'enzyme';
 
 import MainPage from '../../pages/MainPage';
 
@@ -11,7 +11,7 @@ describe('Main page test', function () {
   let wrapper;
 
   beforeEach(() => { 
-    wrapper = shallow(<MainPage />);
+    wrapper = mount(<MainPage/>);
   })
 
   it('should render cardDetail', () => {
