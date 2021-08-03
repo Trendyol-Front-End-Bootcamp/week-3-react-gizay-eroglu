@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
-import Header from "../components/Header";
-import CardDetail from "../components/CardDetail";
+import Header from '../components/Header';
+import CardDetail from '../components/CardDetail';
 
-import { getCharacterById } from "../services/RickAndMortyApi";
+import { getCharacterById } from '../services/RickAndMortyApi';
 
 function DetailPage({ match }) {
   const {
@@ -24,7 +24,7 @@ function DetailPage({ match }) {
   }, []);
 
   const handleGoHome = () => {
-    history.push("/");
+    history.push('/');
   };
 
   if (!character) {
@@ -37,7 +37,7 @@ function DetailPage({ match }) {
       <button className='go-homepage-button' onClick={handleGoHome}>
         Go Home
       </button>
-      <CardDetail
+      <CardDetail 
         name={character.name}
         gender={character.gender}
         locationName={character.location.name}

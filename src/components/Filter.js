@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function Filter({ filter }) {
-  const [gender, setGender] = useState("female");
-  const [name, setName] = useState("");
-  const [status, setStatus] = useState("alive");
+  const [gender, setGender] = useState('female');
+  const [name, setName] = useState('');
+  const [status, setStatus] = useState('alive');
 
   const handleSubmit = (event) => {
     event.preventDefault();

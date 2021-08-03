@@ -1,10 +1,10 @@
-import ReactDOM from "react-dom";
-import { mock } from "jest";
-import { renderToDOM } from "../../index";
+import ReactDOM from 'react-dom';
+import { mock } from 'jest';
+import { renderToDOM } from '../../index';
  
-jest.mock("react-dom");
+jest.mock('react-dom');
 
-describe("test ReactDOM.render", () => {
+describe('test ReactDOM.render', () => {
 
   const originalRender = ReactDOM.render;
 
@@ -16,7 +16,7 @@ describe("test ReactDOM.render", () => {
     ReactDOM.render = originalRender;
   });
 
-  it("should call ReactDOM.render", () => {
+  it('should call ReactDOM.render', () => {
     renderToDOM();
     expect(ReactDOM.render).toHaveBeenCalled();
   });

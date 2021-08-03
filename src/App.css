@@ -32,7 +32,7 @@ select {
   font-weight: 600;
   padding: 3px 30px;
 }
-.page-grid {
+.card-list-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-top: 20px;

@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-import Card from "../components/Card";
-import Filter from "../components/Filter";
-import Header from "../components/Header";
+import Card from '../components/Card';
+import Filter from '../components/Filter';
+import Header from '../components/Header';
 
-import { getCharacters } from "../services/RickAndMortyApi";
+import { getCharacters } from '../services/RickAndMortyApi';
 
 function MainPage() {
   const history = useHistory();
@@ -66,7 +66,7 @@ function MainPage() {
     <>
       <Header />
       <Filter filter={filterCharacters} />
-      <div className='page-grid'>
+      <div className='card-list-container'>
         {isLoading ? <div className='card-loading'>Loading</div> : renderCards()}
       </div>
     </>

@@ -1,9 +1,9 @@
-import "./App.css";
+import './App.css';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import MainPage from "./pages/MainPage";
-import DetailPage from "./pages/DetailPage";
+import MainPage from './pages/MainPage';
+import DetailPage from './pages/DetailPage';
 
 function App() {
   return (
