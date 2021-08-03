@@ -23,19 +23,4 @@ describe('Detail page test', function () {
     expect(wrapper.find('Header')).toBeTruthy();
     expect(wrapper.find('CardDetail')).toBeTruthy();
   })
-
-
 })
-/**  it('expec',() => {
-    let character= [{name:3}]
-    const notFound = wrapper.find('card-loading');
-    expect(notFound).toBeTruthy();
-  })
-
-  it('', () => {
-
-    let character= [{name:3}]
-    const notFound = wrapper.find('go-homepage-button');
-    expect(notFound).toBeTruthy();
-
-  }) */
