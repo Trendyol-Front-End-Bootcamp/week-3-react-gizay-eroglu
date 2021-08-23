@@ -14,7 +14,7 @@ describe('Main page test', function () {
     wrapper = mount(<MainPage/>);
   })
 
-  it('should render cardDetail', () => {
+  it('should render', () => {
     expect(wrapper).not.toBeNull();
     expect(wrapper).toMatchSnapshot();
   })

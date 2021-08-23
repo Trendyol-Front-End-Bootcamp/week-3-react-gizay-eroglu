@@ -14,7 +14,7 @@ describe('Card detail component test', function () {
     wrapper = shallow(<CardDetail />);
   })
 
-  it('should render cardDetail', () => {
+  it('should render card detail', () => {
     expect(wrapper).toMatchSnapshot();
   })
   

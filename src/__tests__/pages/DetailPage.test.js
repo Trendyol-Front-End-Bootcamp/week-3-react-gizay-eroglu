@@ -14,12 +14,12 @@ describe('Detail page test', function () {
     wrapper = shallow(<DetailPage match = {{ params: { id: 1 }}} />);
   })
 
-  it('should render cardDetail', () => {
+  it('should render', () => {
     expect(wrapper).not.toBeNull();
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('', () => {
+  it('should have header and card detail', () => {
     expect(wrapper.find('Header')).toBeTruthy();
     expect(wrapper.find('CardDetail')).toBeTruthy();
   })
